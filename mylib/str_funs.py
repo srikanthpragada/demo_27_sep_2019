@@ -1,4 +1,11 @@
 def contains_upper(s):
+    """
+    Returns true if given string contains uppercase letter
+    Args:
+        s : string
+    Returns:
+        boolean : true if string contains upper otherwise false
+    """
     for c in s:
         if c.isupper():
             return True
