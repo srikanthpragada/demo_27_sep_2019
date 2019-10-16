@@ -19,6 +19,8 @@ class Product:
         return self.price + (self.price * Product.taxrate / 100)
 
     def sell(self, qty):
+        if self.qoh < qty:
+            raise ValueError('Insufficient stock!')
         self.qoh -= qty
 
     def __eq__(self, other):
